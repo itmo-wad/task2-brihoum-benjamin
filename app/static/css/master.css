@@ -1,0 +1,55 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+
+h1 {
+  text-align: center;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+img {
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  transform: scale(1);
+  align-content: center;
+  display: inline-block;
+}
+
+.sub {
+  color: black;
+  z-index: 999;
+  display: none;
+  background: #ccc;
+}
+
+img:hover {
+  outline-offset: -1px;
+  outline: 1px solid white;
+}
+
+.box:hover {
+  opacity: 0.6;
+  background-color: black;
+}
+
+.box:hover .sub {
+  display: block;
+  position: absolute;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css')}}">
+    <title>ITMO WAD 2020 task 1 Benjamin Brihoum</title>
+  </head>
+  <body>
+    <h1>La famosa geleria</h1>
+    <div id="board">
+      <div id="content"/>
+    </div>
+    <script type="text/javascript">
+      let board = document.querySelector("#content");
+      for (i = 0; i < 140; i++) {
+          let box = document.createElement("div");
+          let img = document.createElement("img");
+          let sub = document.createElement("div");
+
+          sub.classList.add("sub");
+          box.classList.add("box");
+          sub.innerHTML = "caption";
+          img.src = `https://picsum.photos/250?random=${i}`;
+
+          box.appendChild(sub);
+          box.appendChild(img);
+          board.appendChild(box);
+      }
+    </script>
+  </body>
+</html>
